@@ -1,6 +1,9 @@
 # DOORBI
 _(Doorbell IOT)_
 
+https://raw.githubusercontent.com/DOORBI/logo.jpg
+
+
 ## Comienzo🚀
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu raspberry pi o cosa similar._
