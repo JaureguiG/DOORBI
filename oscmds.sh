@@ -1,5 +1,5 @@
 #!/bin/sh
-cd photos
+
 echo "Taking the Photo"
 now=$1 #Now is the filename time stamp
 #take pic

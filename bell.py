@@ -2,48 +2,100 @@ import RPi.GPIO as GPIO
 import time
 import os
 import glob
+import pyrebase
+import sys
+
+
+print(sys.path)
+
+
+#conexion a firebase
+
+config = {
+    "apiKey": " ",
+    "authDomain": "",
+    "databaseURL": "",
+    "storageBucket": "",
+}
+
+
+
+firebase = pyrebase.initialize_app(config)
+db = firebase.database()
+
+
+storage = firebase.storage()
+
+
 #GPIO SETUP
 GPIO.setmode(GPIO.BCM)
 Button = 21
 n = 1
 GPIO.setup(Button,GPIO.IN)
-#loop
+#Loop
 print("Program Running")
-while 1 == 1:#loops forever till keyboard interupt (ctr + C) 
-  if GPIO.input(Button) == False:#when button pressed:
+while 1 == 1:#ejecucion indefinida hasta que se precione ctrl+z 
+  if GPIO.input(Button) == False:#cuendo el boton es presionado:
     print("Button Pressed")
     
-    #    ------|    photo & Bell    |------ #
-    #Get FileName
+    #    ------|    foto & timbre    |------ #
+    #Se obtiene el archivo
     now = time.strftime("Date%m-%d-%yTime%H-%M-%S")
-    #Make command to run OCMMDS
+    #MComando dee sistema
+      
     command = "bash oscmds.sh " +  str(now)
     
     # -- OSMC.sh is an Shell script that
     # -- is responsible for taking the picture and
     # -- Making the Doorbell Noise
     
-    # --- We insert the "Now" argument so the python
-    # --- script knows what the file name of the
-    # --- picture will be so it can pass it on into the
-    # --- email script (so it knows what file to email
-    
     #run command
     os.system(command)
     #diagnostics
-    print("Filename:", now)
+    jpg=".jpg"
+    now2=now + jpg
+    print("Filename:", now2)
     
+
+    
+    #metodo para subir imagen a firebse por medio de una variable pibote
+    #para invocar el nombre con jpg de extension
+    
+    firebase = pyrebase.initialize_app(config)
+    db = firebase.database()
+    storage = firebase.storage()
+    myfile=now2
+    cap= myfile
+    storage.child("img/" + str(now2)).put(cap)
   
-    # ----| Email     |---- #
-    print("Email")#email
-    emailcommand = 'python3 IOTNOTIFY2.py "Someone is at the door"' + ' "photos/' + now + '.jpg"'
-    os.system(emailcommand) #running the Email script with:
-    #-- the subject as "Someone is at the door" and the filename
-    #-- We made before at the -Photo & Bell- section
     
-    # -- End Diagnostic Info
-    print("Done Process")
+    print("Proceso terminado")
     #-space out for next "Press of Button"
     print("")
     print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
 
+    print("La captura fue enviada con exito")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    
+    
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
