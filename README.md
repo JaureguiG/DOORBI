@@ -1,7 +1,7 @@
 # DOORBI
 _(Doorbell IOT)_
 
-![Logotipo Doorbi](ttps://raw.githubusercontent.com/JaureguiG/DOORBI/master/logo.jpg)
+![Logotipo Doorbi](https://raw.githubusercontent.com/JaureguiG/DOORBI/master/logo.jpg)
 
 
 ## Comienzo🚀
