@@ -1,7 +1,7 @@
 # DOORBI
 _(Doorbell IOT)_
 
-https://raw.githubusercontent.com/DOORBI/logo.jpg
+https://raw.githubusercontent.com/JaureguiG/DOORBI/blob/master/logo.jpg
 
 
 ## Comienzo🚀
