@@ -3,8 +3,6 @@ _(Doorbell IOT)_
 
 ![Logotipo Doorbi](ttps://raw.githubusercontent.com/JaureguiG/DOORBI/master/logo.jpg)
 
-https://raw.githubusercontent.com/JaureguiG/DOORBI/master/logo.jpg
-
 
 ## Comienzo🚀
 
