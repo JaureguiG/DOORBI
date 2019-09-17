@@ -13,6 +13,26 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 
 ### Pre-requisitos 📋
 
+_Raspberry pi_
+
+```
+No importa el modelo funciona desde la Rapsberry pi Zero hasta el  Modelo 4
+```
+
+
+_Raspbian_
+
+```
+Instalado en la microSD
+```
+
+_Conexión a Internet_
+
+```
+Conexión cableada o wifi, depende del modelo de rpi
+```
+
+
 _python 3.0_
 
 ```
@@ -24,6 +44,15 @@ _python 2.7_
 ```
 sudo apt-get install python2
 ```
+
+
+
+_Fswebcam_
+
+```
+sudo apt-get install fswebcam
+```
+
 
 _Conector Firebase_
 
